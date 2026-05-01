@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Furniture Dong</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brown: { dark: '#3B2314', DEFAULT: '#5C3A1E', light: '#8B6914' },
+                        cream: '#F5F0EB',
+                        gold: { DEFAULT: '#D4A853', dark: '#8B6914' },
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Lato', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Lato', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-cream text-brown-dark min-h-screen flex items-center justify-center">
+    <div class="text-center px-6 max-w-lg">
+        <div class="text-6xl mb-6">✉️</div>
+        <h1 class="text-3xl md:text-4xl font-heading font-bold mb-4">Thank You!</h1>
+        <p class="text-lg text-gray-700 mb-8">Your inquiry has been received. Our team will get back to you within 24 hours.</p>
+        <a href="index.html" class="inline-block bg-gold hover:bg-gold-dark text-white px-8 py-3 rounded font-semibold transition">Back to Home</a>
+    </div>
+</body>
+</html>
