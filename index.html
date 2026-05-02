@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      data-en-title="Furniture Dong | American Style Leather Sofa Manufacturer China"
+      data-zh-title="东方家具 | 中国美式真皮沙发制造商">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +11,16 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://furnituredong.com/">
 
-    <!-- Open Graph (社交分享) -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Furniture Dong | American Style Leather Sofa Manufacturer">
     <meta property="og:description" content="20-year OEM manufacturer. 80,000㎡ factory. Trusted by Hooker & Bernhardt.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://furnituredong.com/">
-    <meta property="og:image" content="https://furnituredong.com/og-image.jpg">
+    <meta property="og:image" content="https://furnituredong.com/images/01_brand/og-image.jpg">
 
-    <!-- Structured Data: Organization + Product -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -24,13 +28,9 @@
       "name": "Furniture Dong",
       "legalName": "Impression North America Furniture Co., Ltd.",
       "url": "https://furnituredong.com",
-      "logo": "https://furnituredong.com/logo.png",
+      "logo": "https://furnituredong.com/images/01_brand/logo.svg",
       "description": "Premium American-style leather sofa manufacturer with 20 years of experience and 80,000㎡ production base.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "Shandong",
-        "addressCountry": "CN"
-      },
+      "address": {"@type": "PostalAddress", "addressRegion": "Shandong", "addressCountry": "CN"},
       "foundingDate": "2004",
       "numberOfEmployees": "500+",
       "knowsAbout": ["Leather Sofa Manufacturing", "OEM Furniture", "American Style Furniture", "Hospitality Furniture"]
@@ -40,65 +40,35 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Serif+SC:wght@500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brown: { dark: '#3B2314', DEFAULT: '#5C3A1E', light: '#8B6914' },
-                        cream: '#F5F0EB',
-                        gold: { DEFAULT: '#D4A853', dark: '#8B6914' },
-                    },
-                    fontFamily: {
-                        heading: ['Playfair Display', 'serif'],
-                        body: ['Lato', 'sans-serif'],
-                    }
-                }
-            }
+            theme: { extend: {
+                colors: { brown: { dark: '#3B2314', DEFAULT: '#5C3A1E', light: '#8B6914' }, cream: '#F5F0EB', gold: { DEFAULT: '#D4A853', dark: '#8B6914' } },
+                fontFamily: { heading: ['Playfair Display', 'Noto Serif SC', 'serif'], body: ['Lato', 'Noto Serif SC', 'sans-serif'] }
+            }}
         }
     </script>
     <style>
-        body { font-family: 'Lato', sans-serif; }
-        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        body { font-family: 'Lato', 'Noto Serif SC', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', 'Noto Serif SC', serif; }
+        :lang(zh-CN) h1, :lang(zh-CN) h2, :lang(zh-CN) h3, :lang(zh-CN) h4 { font-family: 'Noto Serif SC', serif; }
         html { scroll-behavior: smooth; }
-
-        /* Scroll Reveal Animation */
-        .reveal {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
         .reveal-delay-1 { transition-delay: 0.1s; }
         .reveal-delay-2 { transition-delay: 0.2s; }
         .reveal-delay-3 { transition-delay: 0.3s; }
         .reveal-delay-4 { transition-delay: 0.4s; }
-
-        /* Hero subtle zoom */
-        @keyframes heroZoom {
-            from { transform: scale(1.05); }
-            to { transform: scale(1); }
-        }
-        .hero-bg {
-            animation: heroZoom 8s ease-out forwards;
-        }
-
-        /* Card hover lift */
-        .card-lift {
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-        }
-        .card-lift:hover {
-            transform: translateY(-8px);
-        }
-
-        /* Counter number style */
-        .counter {
-            display: inline-block;
-        }
+        @keyframes heroZoom { from { transform: scale(1.05); } to { transform: scale(1); } }
+        .hero-bg { animation: heroZoom 8s ease-out forwards; }
+        .card-lift { transition: transform 0.4s ease, box-shadow 0.4s ease; }
+        .card-lift:hover { transform: translateY(-8px); }
+        .counter { display: inline-block; }
+        .lang-toggle { display: inline-flex; border: 1px solid #D4A853; border-radius: 9999px; overflow: hidden; }
+        .lang-toggle button { padding: 4px 12px; font-size: 13px; font-weight: 600; transition: all 0.2s; }
+        /* Logo placeholder box */
+        .logo-placeholder { color: #C0B5A8; font-size: 11px; }
     </style>
 </head>
 <body class="bg-cream text-brown-dark">
@@ -106,43 +76,56 @@
     <!-- Header -->
     <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#" class="font-heading text-2xl font-bold text-brown-dark">Furniture Dong</a>
+            <a href="index.html" class="flex items-center">
+                <img src="images/01_brand/logo.svg" alt="Furniture Dong" class="h-10 w-auto">
+            </a>
             <nav class="hidden md:flex items-center gap-8">
-                <a href="#home" class="text-brown-dark hover:text-gold transition">Home</a>
-                <a href="#products" class="text-brown-dark hover:text-gold transition">Products</a>
-                <a href="#about" class="text-brown-dark hover:text-gold transition">About Us</a>
-                <a href="#contact" class="text-brown-dark hover:text-gold transition">Contact</a>
+                <a href="#home" class="text-brown-dark hover:text-gold transition" data-en="Home" data-zh="首页">Home</a>
+                <a href="#products" class="text-brown-dark hover:text-gold transition" data-en="Products" data-zh="产品">Products</a>
+                <a href="#about" class="text-brown-dark hover:text-gold transition" data-en="About Us" data-zh="关于我们">About Us</a>
+                <a href="#testimonials" class="text-brown-dark hover:text-gold transition" data-en="Cases" data-zh="客户案例">Cases</a>
+                <a href="#contact" class="text-brown-dark hover:text-gold transition" data-en="Contact" data-zh="联系我们">Contact</a>
             </nav>
-            <div class="flex items-center gap-4">
-                <button onclick="openModal()" class="hidden md:block bg-gold hover:bg-gold-dark text-white px-5 py-2 rounded transition font-semibold">Request a Quote</button>
-                <button onclick="toggleMobileMenu()" class="md:hidden text-brown-dark">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
+            <div class="flex items-center gap-3">
+                <div class="lang-toggle">
+                    <button data-lang-btn="en" onclick="setLang('en')">EN</button>
+                    <button data-lang-btn="zh" onclick="setLang('zh')">中</button>
+                </div>
+                <button onclick="openModal()" class="hidden md:block bg-gold hover:bg-gold-dark text-white px-5 py-2 rounded transition font-semibold" data-en="Request a Quote" data-zh="获取报价">Request a Quote</button>
+                <button onclick="toggleMobileMenu()" class="md:hidden text-brown-dark" aria-label="Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
                 </button>
             </div>
         </div>
-        <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
             <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4">
-                <a href="#home" class="text-brown-dark hover:text-gold transition" onclick="toggleMobileMenu()">Home</a>
-                <a href="#products" class="text-brown-dark hover:text-gold transition" onclick="toggleMobileMenu()">Products</a>
-                <a href="#about" class="text-brown-dark hover:text-gold transition" onclick="toggleMobileMenu()">About Us</a>
-                <a href="#contact" class="text-brown-dark hover:text-gold transition" onclick="toggleMobileMenu()">Contact</a>
-                <button onclick="openModal(); toggleMobileMenu();" class="bg-gold hover:bg-gold-dark text-white px-5 py-2 rounded transition font-semibold w-full">Request a Quote</button>
+                <a href="#home" class="text-brown-dark hover:text-gold transition" onclick="toggleMobileMenu()" data-en="Home" data-zh="首页">Home</a>
+                <a href="#products" class="text-brown-dark hover:text-gold transition" onclick="toggleMobileMenu()" data-en="Products" data-zh="产品">Products</a>
+                <a href="#about" class="text-brown-dark hover:text-gold transition" onclick="toggleMobileMenu()" data-en="About Us" data-zh="关于我们">About Us</a>
+                <a href="#testimonials" class="text-brown-dark hover:text-gold transition" onclick="toggleMobileMenu()" data-en="Cases" data-zh="客户案例">Cases</a>
+                <a href="#contact" class="text-brown-dark hover:text-gold transition" onclick="toggleMobileMenu()" data-en="Contact" data-zh="联系我们">Contact</a>
+                <button onclick="openModal(); toggleMobileMenu();" class="bg-gold hover:bg-gold-dark text-white px-5 py-2 rounded transition font-semibold w-full" data-en="Request a Quote" data-zh="获取报价">Request a Quote</button>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 hero-bg bg-cover bg-center" style="background-image: linear-gradient(rgba(59,35,20,0.55), rgba(59,35,20,0.65)), url('images/hero-premium-leather-sofa.png');"></div>
+        <!-- TODO: Optional video background — uncomment when factory video provided -->
+        <!-- <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+            <source src="videos/factory-aerial.mp4" type="video/mp4">
+        </video> -->
+        <div class="absolute inset-0 hero-bg bg-cover bg-center" style="background-image: linear-gradient(rgba(59,35,20,0.55), rgba(59,35,20,0.65)), url('images/02_hero/hero-premium-leather-sofa.png');"></div>
         <div class="relative max-w-6xl mx-auto px-6 text-center text-white">
-            <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight reveal">Premium American-Style<br>Leather Sofas from China</h1>
-            <p class="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto reveal reveal-delay-1">20 Years Manufacturing · OEM for Hooker & Bernhardt · 80,000㎡ Factory</p>
-            <button onclick="openModal()" class="bg-gold hover:bg-gold-dark text-white px-8 py-4 rounded text-lg font-semibold transition transform hover:scale-105 reveal reveal-delay-2">Request a Quote</button>
+            <h1 class="text-4xl md:text-6xl font-heading font-bold mb-6 leading-tight reveal"
+                data-en="Premium American-Style<br>Leather Sofas from China"
+                data-zh="源自中国的<br>高端美式真皮沙发">Premium American-Style<br>Leather Sofas from China</h1>
+            <p class="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto reveal reveal-delay-1"
+               data-en="20 Years Manufacturing · OEM for Hooker & Bernhardt · 80,000㎡ Factory"
+               data-zh="20年制造经验 · Hooker & Bernhardt 代工厂 · 80,000㎡ 生产基地">20 Years Manufacturing · OEM for Hooker & Bernhardt · 80,000㎡ Factory</p>
+            <button onclick="openModal()" class="bg-gold hover:bg-gold-dark text-white px-8 py-4 rounded text-lg font-semibold transition transform hover:scale-105 reveal reveal-delay-2"
+                    data-en="Request a Quote" data-zh="获取报价">Request a Quote</button>
         </div>
-        <!-- Scroll indicator -->
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 animate-bounce">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
         </div>
@@ -152,36 +135,61 @@
     <section id="about" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-                <img src="https://placehold.co/600x400/5C3A1E/F5F0EB?text=Factory+Image" alt="Furniture Dong 80,000 square meter sofa manufacturing factory in Shandong China" class="rounded-lg shadow-lg w-full reveal">
+                <img src="https://placehold.co/600x400/5C3A1E/F5F0EB?text=Factory+Image"
+                     alt="Furniture Dong factory" class="rounded-lg shadow-lg w-full reveal">
                 <div class="reveal reveal-delay-1">
-                    <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6">Craftsmanship Meets Scale</h2>
-                    <p class="text-lg text-gray-700 mb-4">Impression North America Furniture Co., Ltd. has been dedicated to producing premium American-style leather furniture for over two decades.</p>
-                    <p class="text-lg text-gray-700 mb-4">With our in-house cowhide factory — one of the Top 3 in China by scale — we control quality from raw material to finished product.</p>
-                    <p class="text-lg text-gray-700">SGS certified and trusted by leading US brands, we deliver world-class furniture to partners across the globe.</p>
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6"
+                        data-en="Craftsmanship Meets Scale"
+                        data-zh="匠心工艺 · 规模制造">Craftsmanship Meets Scale</h2>
+                    <p class="text-lg text-gray-700 mb-4"
+                       data-en="Impression North America Furniture Co., Ltd. has been dedicated to producing premium American-style leather furniture for over two decades."
+                       data-zh="印象北美家具有限公司，二十余年专注于高端美式真皮家具的研发与制造。">Impression North America Furniture Co., Ltd. has been dedicated to producing premium American-style leather furniture for over two decades.</p>
+                    <p class="text-lg text-gray-700 mb-4"
+                       data-en="With our in-house cowhide factory — one of the Top 3 in China by scale — we control quality from raw material to finished product."
+                       data-zh="自建牛皮加工厂规模位列全国前三，从原料到成品全程把控品质。">With our in-house cowhide factory — one of the Top 3 in China by scale — we control quality from raw material to finished product.</p>
+                    <p class="text-lg text-gray-700"
+                       data-en="SGS certified and trusted by leading US brands, we deliver world-class furniture to partners across the globe."
+                       data-zh="通过 SGS 认证，深受美国一线品牌信赖，向全球合作伙伴交付世界级家具产品。">SGS certified and trusted by leading US brands, we deliver world-class furniture to partners across the globe.</p>
                 </div>
             </div>
-            <!-- 4-Icon Grid -->
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center p-6 rounded-lg bg-cream reveal reveal-delay-1">
                     <div class="text-4xl mb-3">🏭</div>
                     <div class="text-2xl font-heading font-bold text-brown-dark"><span class="counter" data-target="80000" data-suffix="㎡">0㎡</span></div>
-                    <p class="text-gray-600 mt-1">Production Base</p>
+                    <p class="text-gray-600 mt-1" data-en="Production Base" data-zh="生产基地">Production Base</p>
                 </div>
                 <div class="text-center p-6 rounded-lg bg-cream reveal reveal-delay-2">
                     <div class="text-4xl mb-3">👥</div>
                     <div class="text-2xl font-heading font-bold text-brown-dark"><span class="counter" data-target="500" data-suffix="+">0+</span></div>
-                    <p class="text-gray-600 mt-1">Professional Team</p>
+                    <p class="text-gray-600 mt-1" data-en="Professional Team" data-zh="专业团队">Professional Team</p>
                 </div>
                 <div class="text-center p-6 rounded-lg bg-cream reveal reveal-delay-3">
                     <div class="text-4xl mb-3">🐄</div>
-                    <div class="text-2xl font-heading font-bold text-brown-dark">Top 3</div>
-                    <p class="text-gray-600 mt-1">Cowhide Factory in China</p>
+                    <div class="text-2xl font-heading font-bold text-brown-dark" data-en="Top 3" data-zh="前三">Top 3</div>
+                    <p class="text-gray-600 mt-1" data-en="Cowhide Factory in China" data-zh="中国牛皮工厂">Cowhide Factory in China</p>
                 </div>
                 <div class="text-center p-6 rounded-lg bg-cream reveal reveal-delay-4">
                     <div class="text-4xl mb-3">🏆</div>
                     <div class="text-2xl font-heading font-bold text-brown-dark">OEM</div>
-                    <p class="text-gray-600 mt-1">Hooker & Bernhardt</p>
+                    <p class="text-gray-600 mt-1" data-en="Hooker & Bernhardt" data-zh="Hooker & Bernhardt 代工">Hooker & Bernhardt</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Certifications Logo Wall — placeholder for SGS / BIFMA / CARB / Prop 65 / REACH -->
+    <section class="py-12 bg-cream border-y border-brown-dark/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <p class="text-center text-sm uppercase tracking-widest text-gray-500 mb-8 reveal"
+               data-en="Certifications & Compliance"
+               data-zh="资质认证与合规">Certifications & Compliance</p>
+            <div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center justify-items-center opacity-70">
+                <div class="reveal h-16 w-full flex items-center justify-center bg-white rounded border border-dashed border-gray-300 logo-placeholder">SGS</div>
+                <div class="reveal reveal-delay-1 h-16 w-full flex items-center justify-center bg-white rounded border border-dashed border-gray-300 logo-placeholder">BIFMA</div>
+                <div class="reveal reveal-delay-2 h-16 w-full flex items-center justify-center bg-white rounded border border-dashed border-gray-300 logo-placeholder">CARB</div>
+                <div class="reveal reveal-delay-3 h-16 w-full flex items-center justify-center bg-white rounded border border-dashed border-gray-300 logo-placeholder">Prop 65</div>
+                <div class="reveal h-16 w-full flex items-center justify-center bg-white rounded border border-dashed border-gray-300 logo-placeholder">REACH</div>
+                <div class="reveal reveal-delay-1 h-16 w-full flex items-center justify-center bg-white rounded border border-dashed border-gray-300 logo-placeholder">ISO 9001</div>
             </div>
         </div>
     </section>
@@ -189,61 +197,92 @@
     <!-- Product Showcase -->
     <section id="products" class="py-20 bg-cream">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-4">Our Collections</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">American-style leather sofas in multiple configurations, crafted with premium cowhide and solid wood frames.</p>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-4"
+                data-en="Our Collections" data-zh="产品系列">Our Collections</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto"
+               data-en="American-style leather sofas in multiple configurations, crafted with premium cowhide and solid wood frames."
+               data-zh="多种规格的美式真皮沙发，选用优质牛皮与实木框架精心打造。">American-style leather sofas in multiple configurations, crafted with premium cowhide and solid wood frames.</p>
 
             <!-- Tier 1: Category Cards -->
             <div class="grid md:grid-cols-3 gap-8 mb-16">
                 <a href="living-room.html" class="reveal reveal-delay-1 card-lift bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl block group">
                     <div class="overflow-hidden">
-                        <img src="https://placehold.co/400x300/3B2314/F5F0EB?text=Living+Room" alt="American style leather living room sofa collection" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                        <img src="https://placehold.co/400x300/3B2314/F5F0EB?text=Living+Room" alt="Living room" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <h3 class="font-heading text-xl font-bold mb-2">Living Room Series</h3>
-                        <p class="text-gray-600 mb-3">Classic American-style sectionals and sofas for spacious living areas.</p>
-                        <span class="text-gold font-semibold inline-flex items-center gap-1">View Collection <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+                        <h3 class="font-heading text-xl font-bold mb-2" data-en="Living Room Series" data-zh="客厅系列">Living Room Series</h3>
+                        <p class="text-gray-600 mb-3" data-en="Classic American-style sectionals and sofas for spacious living areas." data-zh="适合大空间的经典美式组合沙发与单椅。">Classic American-style sectionals and sofas for spacious living areas.</p>
+                        <span class="text-gold font-semibold inline-flex items-center gap-1"><span data-en="View Collection" data-zh="查看系列">View Collection</span> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
                     </div>
                 </a>
                 <a href="hospitality.html" class="reveal reveal-delay-2 card-lift bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl block group">
                     <div class="overflow-hidden">
-                        <img src="https://placehold.co/400x300/5C3A1E/F5F0EB?text=Hotel+Lobby" alt="Hotel lobby and hospitality furniture by Furniture Dong" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                        <img src="https://placehold.co/400x300/5C3A1E/F5F0EB?text=Hotel+Lobby" alt="Hospitality" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <h3 class="font-heading text-xl font-bold mb-2">Hotel & Hospitality</h3>
-                        <p class="text-gray-600 mb-3">Durable, elegant seating solutions for lobbies and suites.</p>
-                        <span class="text-gold font-semibold inline-flex items-center gap-1">View Collection <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+                        <h3 class="font-heading text-xl font-bold mb-2" data-en="Hotel & Hospitality" data-zh="酒店工程">Hotel & Hospitality</h3>
+                        <p class="text-gray-600 mb-3" data-en="Durable, elegant seating solutions for lobbies and suites." data-zh="为大堂与套房打造的耐用优雅座椅方案。">Durable, elegant seating solutions for lobbies and suites.</p>
+                        <span class="text-gold font-semibold inline-flex items-center gap-1"><span data-en="View Collection" data-zh="查看系列">View Collection</span> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
                     </div>
                 </a>
                 <a href="custom-oem.html" class="reveal reveal-delay-3 card-lift bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl block group">
                     <div class="overflow-hidden">
-                        <img src="https://placehold.co/400x300/8B6914/F5F0EB?text=Custom+Design" alt="Custom OEM furniture manufacturing service" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+                        <img src="https://placehold.co/400x300/8B6914/F5F0EB?text=Custom+Design" alt="Custom OEM" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <h3 class="font-heading text-xl font-bold mb-2">Custom & OEM</h3>
-                        <p class="text-gray-600 mb-3">Tailored designs to match your brand identity and specifications.</p>
-                        <span class="text-gold font-semibold inline-flex items-center gap-1">View Collection <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+                        <h3 class="font-heading text-xl font-bold mb-2" data-en="Custom & OEM" data-zh="定制 / OEM">Custom & OEM</h3>
+                        <p class="text-gray-600 mb-3" data-en="Tailored designs to match your brand identity and specifications." data-zh="按客户品牌与规格量身打造的定制方案。">Tailored designs to match your brand identity and specifications.</p>
+                        <span class="text-gold font-semibold inline-flex items-center gap-1"><span data-en="View Collection" data-zh="查看系列">View Collection</span> <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
                     </div>
                 </a>
             </div>
 
-            <!-- Tier 2: Featured Product -->
-            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-                <img src="https://placehold.co/600x450/3B2314/F5F0EB?text=Featured+Sofa" alt="Heritage Collection 3-seat full grain leather sofa" class="rounded-lg shadow-lg w-full reveal">
-                <div class="reveal reveal-delay-1">
-                    <span class="text-gold font-semibold uppercase tracking-wide">Featured</span>
-                    <h3 class="text-2xl md:text-3xl font-heading font-bold mt-2 mb-4">Heritage Collection 3-Seat Sofa</h3>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-start gap-2"><span class="text-gold">✓</span> Full-grain Italian cowhide leather</li>
-                        <li class="flex items-start gap-2"><span class="text-gold">✓</span> Solid hardwood frame construction</li>
-                        <li class="flex items-start gap-2"><span class="text-gold">✓</span> High-density foam + down-feather cushions</li>
-                        <li class="flex items-start gap-2"><span class="text-gold">✓</span> Available in 12 leather colors</li>
-                        <li class="flex items-start gap-2"><span class="text-gold">✓</span> Configurations: 1 / 2 / 3 / 4 seat</li>
-                    </ul>
-                    <button onclick="openModal()" class="mt-6 bg-gold hover:bg-gold-dark text-white px-6 py-3 rounded font-semibold transition">Inquire Now</button>
+            <!-- Tier 2: Featured Products (Expanded to 3) -->
+            <h3 class="text-2xl md:text-3xl font-heading font-bold text-center mb-10 reveal" data-en="Featured Products" data-zh="重点产品">Featured Products</h3>
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="reveal card-lift bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/600x450/3B2314/F5F0EB?text=Heritage+3-Seat" alt="Heritage 3-Seat" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-gold text-xs font-semibold uppercase tracking-wide">FD-LR-001</span>
+                        <h4 class="font-heading text-xl font-bold mt-1 mb-3" data-en="Heritage 3-Seat Sofa" data-zh="Heritage 三人沙发">Heritage 3-Seat Sofa</h4>
+                        <ul class="space-y-1 text-sm text-gray-600 mb-4">
+                            <li data-en="✓ Full-grain Italian leather" data-zh="✓ 意大利头层牛皮">✓ Full-grain Italian leather</li>
+                            <li data-en="✓ Solid hardwood frame" data-zh="✓ 实木硬木框架">✓ Solid hardwood frame</li>
+                            <li data-en="✓ 12 leather color options" data-zh="✓ 12 种皮色可选">✓ 12 leather color options</li>
+                        </ul>
+                        <button onclick="openModal()" class="text-gold font-semibold text-sm hover:text-gold-dark" data-en="Inquire Now →" data-zh="立即咨询 →">Inquire Now →</button>
+                    </div>
+                </div>
+                <div class="reveal reveal-delay-1 card-lift bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/600x450/5C3A1E/F5F0EB?text=Manor+Sectional" alt="Manor Sectional" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-gold text-xs font-semibold uppercase tracking-wide">FD-LR-002</span>
+                        <h4 class="font-heading text-xl font-bold mt-1 mb-3" data-en="Manor L-Shape Sectional" data-zh="Manor L 型组合沙发">Manor L-Shape Sectional</h4>
+                        <ul class="space-y-1 text-sm text-gray-600 mb-4">
+                            <li data-en="✓ Modular 5-seat configuration" data-zh="✓ 模块化 5 人位">✓ Modular 5-seat configuration</li>
+                            <li data-en="✓ Removable chaise lounge" data-zh="✓ 可拆贵妃榻">✓ Removable chaise lounge</li>
+                            <li data-en="✓ Deep seat ergonomic design" data-zh="✓ 深座人体工学设计">✓ Deep seat ergonomic design</li>
+                        </ul>
+                        <button onclick="openModal()" class="text-gold font-semibold text-sm hover:text-gold-dark" data-en="Inquire Now →" data-zh="立即咨询 →">Inquire Now →</button>
+                    </div>
+                </div>
+                <div class="reveal reveal-delay-2 card-lift bg-white rounded-lg shadow-md overflow-hidden">
+                    <img src="https://placehold.co/600x450/8B6914/F5F0EB?text=Power+Recliner" alt="Power Recliner" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <span class="text-gold text-xs font-semibold uppercase tracking-wide">FD-LR-003</span>
+                        <h4 class="font-heading text-xl font-bold mt-1 mb-3" data-en="Classic Power Recliner" data-zh="经典电动躺椅">Classic Power Recliner</h4>
+                        <ul class="space-y-1 text-sm text-gray-600 mb-4">
+                            <li data-en="✓ Dual power recline" data-zh="✓ 双电动躺椅功能">✓ Dual power recline</li>
+                            <li data-en="✓ USB charging port" data-zh="✓ USB 充电接口">✓ USB charging port</li>
+                            <li data-en="✓ Adjustable lumbar support" data-zh="✓ 可调腰部支撑">✓ Adjustable lumbar support</li>
+                        </ul>
+                        <button onclick="openModal()" class="text-gold font-semibold text-sm hover:text-gold-dark" data-en="Inquire Now →" data-zh="立即咨询 →">Inquire Now →</button>
+                    </div>
                 </div>
             </div>
 
-            <!-- Tier 3: Gallery Grid -->
+            <!-- Tier 3: Gallery Grid (Expanded to 16) -->
+            <h3 class="text-2xl md:text-3xl font-heading font-bold text-center mb-10 reveal" data-en="Product Gallery" data-zh="产品图库">Product Gallery</h3>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <img src="https://placehold.co/300x300/3B2314/F5F0EB?text=Sofa+1" alt="Product 1" class="rounded-lg w-full h-48 object-cover hover:opacity-80 transition">
                 <img src="https://placehold.co/300x300/5C3A1E/F5F0EB?text=Sofa+2" alt="Product 2" class="rounded-lg w-full h-48 object-cover hover:opacity-80 transition">
@@ -253,6 +292,86 @@
                 <img src="https://placehold.co/300x300/8B6914/F5F0EB?text=Sofa+6" alt="Product 6" class="rounded-lg w-full h-48 object-cover hover:opacity-80 transition">
                 <img src="https://placehold.co/300x300/5C3A1E/F5F0EB?text=Sofa+7" alt="Product 7" class="rounded-lg w-full h-48 object-cover hover:opacity-80 transition">
                 <img src="https://placehold.co/300x300/3B2314/F5F0EB?text=Sofa+8" alt="Product 8" class="rounded-lg w-full h-48 object-cover hover:opacity-80 transition">
+                <img src="https://placehold.co/300x300/3B2314/F5F0EB?text=Sofa+9" alt="Product 9" class="rounded-lg w-full h-48 object-cover hover:opacity-80 transition">
+                <img src="https://placehold.co/300x300/5C3A1E/F5F0EB?text=Sofa+10" alt="Product 10" class="rounded-lg w-full h-48 object-cover hover:opacity-80 transition">
+                <img src="https://placehold.co/300x300/8B6914/F5F0EB?text=Sofa+11" alt="Product 11" class="rounded-lg w-full h-48 object-cover hover:opacity-80 transition">
+                <img src="https://placehold.co/300x300/D4A853/3B2314?text=Sofa+12" alt="Product 12" class="rounded-lg w-full h-48 object-cover hover:opacity-80 transition">
+                <img src="https://placehold.co/300x300/D4A853/3B2314?text=Sofa+13" alt="Product 13" class="rounded-lg w-full h-48 object-cover hover:opacity-80 transition">
+                <img src="https://placehold.co/300x300/8B6914/F5F0EB?text=Sofa+14" alt="Product 14" class="rounded-lg w-full h-48 object-cover hover:opacity-80 transition">
+                <img src="https://placehold.co/300x300/5C3A1E/F5F0EB?text=Sofa+15" alt="Product 15" class="rounded-lg w-full h-48 object-cover hover:opacity-80 transition">
+                <img src="https://placehold.co/300x300/3B2314/F5F0EB?text=Sofa+16" alt="Product 16" class="rounded-lg w-full h-48 object-cover hover:opacity-80 transition">
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Trusted Clients Logo Wall -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl md:text-3xl font-heading font-bold text-center mb-2 reveal"
+                data-en="Trusted by Industry Leaders"
+                data-zh="深受业界领导品牌信赖">Trusted by Industry Leaders</h2>
+            <p class="text-center text-gray-600 mb-10 reveal reveal-delay-1"
+               data-en="OEM partner for premium American furniture brands"
+               data-zh="美国一线高端家具品牌的 OEM 制造商">OEM partner for premium American furniture brands</p>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-items-center opacity-70">
+                <div class="reveal h-16 w-full flex items-center justify-center bg-cream rounded border border-dashed border-gray-300 font-heading text-lg font-bold">HOOKER</div>
+                <div class="reveal reveal-delay-1 h-16 w-full flex items-center justify-center bg-cream rounded border border-dashed border-gray-300 font-heading text-lg font-bold">BERNHARDT</div>
+                <div class="reveal reveal-delay-2 h-16 w-full flex items-center justify-center bg-cream rounded border border-dashed border-gray-300 logo-placeholder" data-en="Client 3" data-zh="客户 3">Client 3</div>
+                <div class="reveal reveal-delay-3 h-16 w-full flex items-center justify-center bg-cream rounded border border-dashed border-gray-300 logo-placeholder" data-en="Client 4" data-zh="客户 4">Client 4</div>
+                <div class="reveal reveal-delay-4 h-16 w-full flex items-center justify-center bg-cream rounded border border-dashed border-gray-300 logo-placeholder" data-en="Client 5" data-zh="客户 5">Client 5</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW: Customer Testimonials & Case Studies -->
+    <section id="testimonials" class="py-20 bg-cream">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-4 reveal"
+                data-en="Customer Stories"
+                data-zh="客户案例">Customer Stories</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto reveal reveal-delay-1"
+               data-en="Real projects, real partnerships. Below are placeholder cases — to be replaced with actual customer testimonials."
+               data-zh="真实项目，真实合作。下方为占位案例，待替换为实际客户证言。">Real projects, real partnerships.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="reveal bg-white p-8 rounded-lg shadow-md card-lift">
+                    <div class="text-gold text-3xl mb-4">"</div>
+                    <p class="text-gray-700 mb-6 italic"
+                       data-en="[Placeholder] Furniture Dong delivered our 200-room hotel project on time with consistent quality. Their attention to detail set them apart from other manufacturers we evaluated."
+                       data-zh="【占位】东方家具按时高质量交付了我们 200 间客房的酒店项目。在我们评估的众多制造商中，他们对细节的把控独树一帜。">"[Placeholder] Furniture Dong delivered our 200-room hotel project on time with consistent quality."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-cream border border-gray-200 flex items-center justify-center logo-placeholder">PIC</div>
+                        <div>
+                            <div class="font-bold text-sm" data-en="Procurement Director" data-zh="采购总监">Procurement Director</div>
+                            <div class="text-xs text-gray-500" data-en="Boutique Hotel Group, USA" data-zh="美国精品酒店集团">Boutique Hotel Group, USA</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal reveal-delay-1 bg-white p-8 rounded-lg shadow-md card-lift">
+                    <div class="text-gold text-3xl mb-4">"</div>
+                    <p class="text-gray-700 mb-6 italic"
+                       data-en="[Placeholder] We've been working with Furniture Dong for 8 years. Their OEM team understands our brand and consistently delivers products that meet our high standards."
+                       data-zh="【占位】我们与东方家具合作已 8 年。他们的 OEM 团队深刻理解我们的品牌，始终交付符合高标准的产品。">"[Placeholder] We've been working with Furniture Dong for 8 years."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-cream border border-gray-200 flex items-center justify-center logo-placeholder">PIC</div>
+                        <div>
+                            <div class="font-bold text-sm" data-en="Brand Manager" data-zh="品牌经理">Brand Manager</div>
+                            <div class="text-xs text-gray-500" data-en="Premium Furniture Brand, USA" data-zh="美国高端家具品牌">Premium Furniture Brand, USA</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal reveal-delay-2 bg-white p-8 rounded-lg shadow-md card-lift">
+                    <div class="text-gold text-3xl mb-4">"</div>
+                    <p class="text-gray-700 mb-6 italic"
+                       data-en="[Placeholder] As an interior designer, finding a manufacturer who can deliver custom pieces with this level of craftsmanship is rare. Furniture Dong is a true partner."
+                       data-zh="【占位】作为室内设计师，能找到能以这种工艺水准交付定制产品的制造商非常罕见。东方家具是真正的合作伙伴。">"[Placeholder] Finding a manufacturer who can deliver custom pieces with this level of craftsmanship is rare."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-cream border border-gray-200 flex items-center justify-center logo-placeholder">PIC</div>
+                        <div>
+                            <div class="font-bold text-sm" data-en="Senior Interior Designer" data-zh="高级室内设计师">Senior Interior Designer</div>
+                            <div class="text-xs text-gray-500" data-en="Design Studio, Europe" data-zh="欧洲设计工作室">Design Studio, Europe</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -260,103 +379,179 @@
     <!-- CTA Section -->
     <section id="contact" class="py-20 bg-brown-dark text-white text-center">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4 reveal">Ready to Partner with Us?</h2>
-            <p class="text-lg opacity-90 mb-8 max-w-2xl mx-auto reveal reveal-delay-1">Whether you need 50 pieces or 5,000, we have the capacity and expertise to deliver. Get a quote within 24 hours.</p>
-            <button onclick="openModal()" class="bg-gold hover:bg-gold-dark text-white px-8 py-4 rounded text-lg font-semibold transition transform hover:scale-105 reveal reveal-delay-2">Request a Quote</button>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4 reveal"
+                data-en="Ready to Partner with Us?"
+                data-zh="准备好与我们合作了吗？">Ready to Partner with Us?</h2>
+            <p class="text-lg opacity-90 mb-8 max-w-2xl mx-auto reveal reveal-delay-1"
+               data-en="Whether you need 50 pieces or 5,000, we have the capacity and expertise to deliver. Get a quote within 24 hours."
+               data-zh="无论 50 件还是 5,000 件，我们都有能力按期交付。24 小时内回复报价。">Whether you need 50 pieces or 5,000, we have the capacity and expertise to deliver. Get a quote within 24 hours.</p>
+            <button onclick="openModal()" class="bg-gold hover:bg-gold-dark text-white px-8 py-4 rounded text-lg font-semibold transition transform hover:scale-105 reveal reveal-delay-2"
+                    data-en="Request a Quote" data-zh="获取报价">Request a Quote</button>
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-12">Frequently Asked Questions</h2>
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-center mb-12"
+                data-en="Frequently Asked Questions" data-zh="常见问题">Frequently Asked Questions</h2>
             <div class="grid md:grid-cols-2 gap-12 items-start">
-                <!-- FAQ Accordion -->
                 <div class="space-y-4">
                     <div class="border border-gray-200 rounded-lg overflow-hidden">
                         <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-cream transition">
-                            <span class="font-semibold">What is your Minimum Order Quantity (MOQ)?</span>
-                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <span class="font-semibold" data-en="What is your Minimum Order Quantity (MOQ)?" data-zh="最小起订量（MOQ）是多少？">What is your Minimum Order Quantity (MOQ)?</span>
+                            <svg class="w-5 h-5 transform transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div class="hidden px-6 pb-4 text-gray-600">
-                            <p>Our standard MOQ is 20 pieces per style. For OEM/custom orders, we can discuss flexible arrangements based on the project scope.</p>
+                            <p data-en="Our standard MOQ is 20 pieces per style. For OEM/custom orders, we can discuss flexible arrangements based on the project scope."
+                               data-zh="标准款最小起订量为每款 20 件。OEM / 定制订单可根据项目规模灵活协商。">Our standard MOQ is 20 pieces per style.</p>
                         </div>
                     </div>
                     <div class="border border-gray-200 rounded-lg overflow-hidden">
                         <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-cream transition">
-                            <span class="font-semibold">What is the typical lead time?</span>
-                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <span class="font-semibold" data-en="What is the typical lead time?" data-zh="一般交货周期多长？">What is the typical lead time?</span>
+                            <svg class="w-5 h-5 transform transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div class="hidden px-6 pb-4 text-gray-600">
-                            <p>Standard orders: 30–45 days after deposit confirmation. Custom/OEM orders: 45–60 days depending on complexity and material availability.</p>
+                            <p data-en="Standard orders: 30–45 days after deposit confirmation. Custom/OEM orders: 45–60 days depending on complexity and material availability."
+                               data-zh="标准订单：定金确认后 30-45 天。定制 / OEM 订单：45-60 天。">Standard orders: 30–45 days. Custom/OEM: 45–60 days.</p>
                         </div>
                     </div>
                     <div class="border border-gray-200 rounded-lg overflow-hidden">
                         <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-cream transition">
-                            <span class="font-semibold">Can you customize designs?</span>
-                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <span class="font-semibold" data-en="Can you customize designs?" data-zh="可以定制设计吗？">Can you customize designs?</span>
+                            <svg class="w-5 h-5 transform transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div class="hidden px-6 pb-4 text-gray-600">
-                            <p>Absolutely. We offer full OEM/ODM services including custom dimensions, leather colors, cushion firmness, and frame modifications. Send us your drawings or references.</p>
+                            <p data-en="Absolutely. We offer full OEM/ODM services including custom dimensions, leather colors, cushion firmness, and frame modifications."
+                               data-zh="完全可以。我们提供完整的 OEM / ODM 服务，包括尺寸、皮革颜色、坐垫软硬度、框架结构定制。">Absolutely. We offer full OEM/ODM services.</p>
                         </div>
                     </div>
                     <div class="border border-gray-200 rounded-lg overflow-hidden">
                         <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-cream transition">
-                            <span class="font-semibold">What payment terms do you accept?</span>
-                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <span class="font-semibold" data-en="What payment terms do you accept?" data-zh="支持哪些付款方式？">What payment terms do you accept?</span>
+                            <svg class="w-5 h-5 transform transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div class="hidden px-6 pb-4 text-gray-600">
-                            <p>We accept T/T (30% deposit, 70% before shipment), L/C at sight, and Western Union for sample orders. Other terms negotiable for long-term partners.</p>
+                            <p data-en="We accept T/T (30% deposit, 70% before shipment), L/C at sight, and Western Union for sample orders."
+                               data-zh="支持 T/T 电汇（30% 定金 + 70% 发货前付清）、即期信用证、样品订单可用 Western Union。">T/T 30%+70%, L/C at sight, WU for samples.</p>
                         </div>
                     </div>
                     <div class="border border-gray-200 rounded-lg overflow-hidden">
                         <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-cream transition">
-                            <span class="font-semibold">Do you have quality certifications?</span>
-                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <span class="font-semibold" data-en="Do you have quality certifications?" data-zh="有哪些质量认证？">Do you have quality certifications?</span>
+                            <svg class="w-5 h-5 transform transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div class="hidden px-6 pb-4 text-gray-600">
-                            <p>Yes. We are SGS certified and comply with international quality standards. Our products pass BIFMA testing for the US market.</p>
+                            <p data-en="Yes. We are SGS certified and comply with international quality standards. Our products pass BIFMA testing for the US market."
+                               data-zh="是的。我们已获 SGS 认证，符合国际质量标准。产品通过 BIFMA 测试。">SGS certified, BIFMA tested.</p>
                         </div>
                     </div>
                     <div class="border border-gray-200 rounded-lg overflow-hidden">
                         <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-cream transition">
-                            <span class="font-semibold">How do you handle shipping?</span>
-                            <svg class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            <span class="font-semibold" data-en="How do you handle shipping?" data-zh="货运方式是怎样的？">How do you handle shipping?</span>
+                            <svg class="w-5 h-5 transform transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                         </button>
                         <div class="hidden px-6 pb-4 text-gray-600">
-                            <p>We ship FOB Qingdao port. We can also arrange CIF to your destination port. Each piece is individually wrapped and corner-protected for safe container loading.</p>
+                            <p data-en="We ship FOB Qingdao port. We can also arrange CIF to your destination port. Each piece is individually wrapped and corner-protected."
+                               data-zh="默认 FOB 青岛港发货，也可安排 CIF 到目的港。每件单独包装、四角加护。">FOB Qingdao default, CIF available.</p>
+                        </div>
+                    </div>
+                    <!-- NEW FAQ: Sample Policy -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-cream transition">
+                            <span class="font-semibold" data-en="What is your sample policy?" data-zh="样品政策是怎样的？">What is your sample policy?</span>
+                            <svg class="w-5 h-5 transform transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="hidden px-6 pb-4 text-gray-600">
+                            <p data-en="[Placeholder — to be confirmed by client] Samples are available for evaluation. Sample fees and shipping costs may apply, refundable upon bulk order placement."
+                               data-zh="【占位 — 待甲方确认】可提供样品评估。可能产生样品费与运费，下大货订单后可退还。">[Placeholder — to be confirmed]</p>
+                        </div>
+                    </div>
+                    <!-- NEW FAQ: Warranty -->
+                    <div class="border border-gray-200 rounded-lg overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-cream transition">
+                            <span class="font-semibold" data-en="What is your warranty policy?" data-zh="保修政策是怎样的？">What is your warranty policy?</span>
+                            <svg class="w-5 h-5 transform transition-transform flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div class="hidden px-6 pb-4 text-gray-600">
+                            <p data-en="[Placeholder — to be confirmed by client] We provide a structural warranty on frames and a separate warranty on upholstery. Details available upon inquiry."
+                               data-zh="【占位 — 待甲方确认】框架结构与软包面料分别提供保修。详情请询盘。">[Placeholder — to be confirmed]</p>
                         </div>
                     </div>
                 </div>
-                <!-- FAQ Image -->
-                <img src="https://placehold.co/500x600/5C3A1E/F5F0EB?text=Craftsmanship" alt="Leather craftsmanship" class="rounded-lg shadow-lg w-full hidden md:block">
+                <img src="https://placehold.co/500x600/5C3A1E/F5F0EB?text=Craftsmanship" alt="Craftsmanship" class="rounded-lg shadow-lg w-full hidden md:block">
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-brown-dark text-white py-12">
+    <!-- Footer (Redesigned with full contact fields) -->
+    <footer class="bg-brown-dark text-white pt-16 pb-8">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div>
-                    <h3 class="font-heading text-xl font-bold mb-2">Furniture Dong</h3>
-                    <p class="text-sm opacity-75">Impression North America Furniture Co., Ltd.</p>
-                    <p class="text-sm opacity-75">Shandong, China</p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <!-- Column 1: Brand -->
+                <div class="md:col-span-1">
+                    <img src="images/01_brand/logo-white.svg" alt="Furniture Dong" class="h-10 w-auto mb-4">
+                    <p class="text-sm opacity-75 mb-3"
+                       data-en="Premium American-style leather furniture from Shandong, China. Trusted globally for 20 years."
+                       data-zh="源自中国山东的高端美式真皮家具。20 年来受全球客户信赖。">Premium American-style leather furniture from Shandong, China.</p>
                 </div>
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition" aria-label="LinkedIn">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    </a>
-                    <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition" aria-label="Facebook">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    </a>
-                    <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition" aria-label="Instagram">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-                    </a>
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="font-heading font-bold mb-4 text-gold" data-en="Explore" data-zh="探索">Explore</h4>
+                    <ul class="space-y-2 text-sm opacity-90">
+                        <li><a href="#home" class="hover:text-gold" data-en="Home" data-zh="首页">Home</a></li>
+                        <li><a href="#products" class="hover:text-gold" data-en="Products" data-zh="产品">Products</a></li>
+                        <li><a href="#about" class="hover:text-gold" data-en="About Us" data-zh="关于我们">About Us</a></li>
+                        <li><a href="#testimonials" class="hover:text-gold" data-en="Customer Stories" data-zh="客户案例">Customer Stories</a></li>
+                        <li><a href="custom-oem.html" class="hover:text-gold" data-en="OEM Service" data-zh="OEM 服务">OEM Service</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Contact (placeholder for client info) -->
+                <div>
+                    <h4 class="font-heading font-bold mb-4 text-gold" data-en="Contact" data-zh="联系我们">Contact</h4>
+                    <ul class="space-y-3 text-sm opacity-90">
+                        <li class="flex items-start gap-2">
+                            <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <a href="mailto:info@furnituredong.com" class="hover:text-gold">info@furnituredong.com</a>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            <span>+86 XXX-XXXX-XXXX</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M17.6 6.32A8.78 8.78 0 0011.5 4a8.84 8.84 0 00-7.6 13.27L3 21l3.84-1A8.83 8.83 0 0011.5 21a8.85 8.85 0 008.85-8.85 8.79 8.79 0 00-2.75-5.83zM11.5 19.55a7.32 7.32 0 01-3.74-1.02l-.27-.16-2.78.73.74-2.71-.18-.28a7.34 7.34 0 1113.61-3.96 7.34 7.34 0 01-7.38 7.4z"/></svg>
+                            <span>WhatsApp: +86 XXX-XXXX</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <span data-en="Shandong, China" data-zh="中国 · 山东">Shandong, China</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Column 4: Social + Newsletter -->
+                <div>
+                    <h4 class="font-heading font-bold mb-4 text-gold" data-en="Follow Us" data-zh="关注我们">Follow Us</h4>
+                    <div class="flex gap-3 mb-6">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition" aria-label="LinkedIn"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition" aria-label="Facebook"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold transition" aria-label="Pinterest"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+                    </div>
+                    <p class="text-xs opacity-60"
+                       data-en="Connect for product updates and trade show announcements."
+                       data-zh="关注我们以获取新品资讯与展会动态。">Connect for product updates and trade show announcements.</p>
                 </div>
             </div>
-            <div class="border-t border-white/10 mt-8 pt-8 text-center text-sm opacity-75">
-                <p>© 2024 Furniture Dong. All rights reserved. | Beauty Unites. Love Connects the World.</p>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs opacity-60">
+                <p data-en="© 2024 Furniture Dong · Impression North America Furniture Co., Ltd."
+                   data-zh="© 2024 东方家具 · 印象北美家具有限公司">© 2024 Furniture Dong · Impression North America Furniture Co., Ltd.</p>
+                <div class="flex gap-6">
+                    <a href="privacy.html" class="hover:text-gold" data-en="Privacy Policy" data-zh="隐私政策">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-gold" data-en="Terms of Use" data-zh="使用条款">Terms of Use</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -365,75 +560,71 @@
     <div id="inquiryModal" class="fixed inset-0 z-[100] hidden items-center justify-center">
         <div class="absolute inset-0 bg-black/50" onclick="closeModal()"></div>
         <div class="relative bg-white rounded-xl shadow-2xl w-full max-w-lg mx-4 p-8 max-h-[90vh] overflow-y-auto">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600" aria-label="Close">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
-            <h3 class="font-heading text-2xl font-bold mb-2">Request a Quote</h3>
-            <p class="text-gray-600 mb-6">Fill in the form below and we'll respond within 24 hours.</p>
+            <h3 class="font-heading text-2xl font-bold mb-2" data-en="Request a Quote" data-zh="获取报价">Request a Quote</h3>
+            <p class="text-gray-600 mb-6" data-en="Fill in the form below and we'll respond within 24 hours." data-zh="请填写以下表单，我们将在 24 小时内回复您。">Fill in the form below and we'll respond within 24 hours.</p>
             <form action="thankyou.html" method="GET" class="space-y-4">
                 <div>
-                    <label class="block text-sm font-semibold mb-1">Name *</label>
+                    <label class="block text-sm font-semibold mb-1" data-en="Name *" data-zh="姓名 *">Name *</label>
                     <input type="text" name="name" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gold">
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold mb-1">Company</label>
+                    <label class="block text-sm font-semibold mb-1" data-en="Company" data-zh="公司">Company</label>
                     <input type="text" name="company" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gold">
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold mb-1">Email *</label>
+                    <label class="block text-sm font-semibold mb-1" data-en="Email *" data-zh="邮箱 *">Email *</label>
                     <input type="email" name="email" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gold">
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold mb-1">Country</label>
+                    <label class="block text-sm font-semibold mb-1" data-en="Country" data-zh="国家 / 地区">Country</label>
                     <input type="text" name="country" class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gold">
                 </div>
                 <div>
-                    <label class="block text-sm font-semibold mb-1">Message *</label>
-                    <textarea name="message" rows="4" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gold" placeholder="Tell us about your needs: product type, quantity, timeline..."></textarea>
+                    <label class="block text-sm font-semibold mb-1" data-en="Message *" data-zh="留言 *">Message *</label>
+                    <textarea name="message" rows="4" required
+                              class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gold"
+                              data-en-placeholder="Tell us about your needs: product type, quantity, timeline..."
+                              data-zh-placeholder="请告诉我们您的需求：产品类型、数量、交期..."
+                              placeholder="Tell us about your needs..."></textarea>
                 </div>
-                <button type="submit" class="w-full bg-gold hover:bg-gold-dark text-white py-3 rounded font-semibold transition">Send Inquiry</button>
+                <button type="submit" class="w-full bg-gold hover:bg-gold-dark text-white py-3 rounded font-semibold transition" data-en="Send Inquiry" data-zh="发送询盘">Send Inquiry</button>
+                <!-- TODO: Catalog download button — uncomment when PDF available -->
+                <!-- <a href="documents/furniture-dong-catalog.pdf" target="_blank" class="block text-center text-sm text-gray-500 hover:text-gold mt-2" data-en="Or download our full catalog (PDF)" data-zh="或下载完整产品目录 (PDF)">Or download our full catalog (PDF)</a> -->
             </form>
         </div>
     </div>
 
+    <script src="js/i18n.js"></script>
+    <script src="js/cookie.js"></script>
     <script>
         function openModal() {
             document.getElementById('inquiryModal').classList.remove('hidden');
             document.getElementById('inquiryModal').classList.add('flex');
             document.body.style.overflow = 'hidden';
         }
-
         function closeModal() {
             document.getElementById('inquiryModal').classList.add('hidden');
             document.getElementById('inquiryModal').classList.remove('flex');
             document.body.style.overflow = '';
         }
-
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('hidden');
-        }
-
+        function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
         function toggleFaq(button) {
             const content = button.nextElementSibling;
             const icon = button.querySelector('svg');
             content.classList.toggle('hidden');
             icon.classList.toggle('rotate-180');
         }
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeModal();
-        });
-
-        // Scroll Reveal — Intersection Observer
+        // Scroll Reveal
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    revealObserver.unobserve(entry.target);
-                }
+                if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); }
             });
         }, { threshold: 0.15 });
-
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
         // Counter animation
@@ -442,26 +633,19 @@
             const suffix = el.dataset.suffix || '';
             const duration = 1800;
             const start = performance.now();
-
             function update(now) {
                 const progress = Math.min((now - start) / duration, 1);
-                const eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
-                const current = Math.floor(target * eased);
-                el.textContent = current.toLocaleString() + suffix;
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.floor(target * eased).toLocaleString() + suffix;
                 if (progress < 1) requestAnimationFrame(update);
             }
             requestAnimationFrame(update);
         }
-
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounter(entry.target);
-                    counterObserver.unobserve(entry.target);
-                }
+                if (entry.isIntersecting) { animateCounter(entry.target); counterObserver.unobserve(entry.target); }
             });
         }, { threshold: 0.5 });
-
         document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
     </script>
 </body>

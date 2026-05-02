@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en"
+      data-en-title="Terms of Use | Furniture Dong"
+      data-zh-title="使用条款 | 东方家具">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use | Furniture Dong</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Serif+SC:wght@500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: {
+            colors: { brown: { dark: '#3B2314', DEFAULT: '#5C3A1E', light: '#8B6914' }, cream: '#F5F0EB', gold: { DEFAULT: '#D4A853', dark: '#8B6914' } },
+            fontFamily: { heading: ['Playfair Display', 'Noto Serif SC', 'serif'], body: ['Lato', 'Noto Serif SC', 'sans-serif'] }
+        }}}
+    </script>
+    <style>
+        body { font-family: 'Lato', 'Noto Serif SC', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', 'Noto Serif SC', serif; }
+        :lang(zh-CN) h1, :lang(zh-CN) h2, :lang(zh-CN) h3 { font-family: 'Noto Serif SC', serif; }
+        .lang-toggle { display: inline-flex; border: 1px solid #D4A853; border-radius: 9999px; overflow: hidden; }
+        .lang-toggle button { padding: 4px 12px; font-size: 13px; font-weight: 600; transition: all 0.2s; }
+        .legal-content h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 0.75rem; color: #3B2314; }
+        .legal-content p { margin-bottom: 1rem; line-height: 1.7; color: #555; }
+    </style>
+</head>
+<body class="bg-cream text-brown-dark">
+
+    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center"><img src="images/01_brand/logo.svg" alt="Furniture Dong" class="h-10 w-auto"></a>
+            <div class="flex items-center gap-3">
+                <div class="lang-toggle">
+                    <button data-lang-btn="en" onclick="setLang('en')">EN</button>
+                    <button data-lang-btn="zh" onclick="setLang('zh')">中</button>
+                </div>
+                <a href="index.html" class="text-brown-dark hover:text-gold text-sm" data-en="← Back to Home" data-zh="← 返回首页">← Back to Home</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-32 pb-20">
+        <div class="max-w-3xl mx-auto px-6 legal-content">
+            <h1 class="text-4xl font-heading font-bold mb-4" data-en="Terms of Use" data-zh="使用条款">Terms of Use</h1>
+            <p class="text-sm text-gray-500 mb-8" data-en="Last updated: [DATE — to be confirmed]" data-zh="最后更新：【日期 — 待确认】">Last updated: [DATE — to be confirmed]</p>
+
+            <div data-en='
+            <p>By accessing and using furnituredong.com, you agree to be bound by these Terms of Use. If you do not agree, please do not use this website.</p>
+
+            <h2>1. Use of Website</h2>
+            <p>This website is intended for business-to-business inquiries regarding furniture manufacturing services. All content (images, text, designs) is the property of Impression North America Furniture Co., Ltd. and protected by intellectual property laws.</p>
+
+            <h2>2. Product Information</h2>
+            <p>Product specifications, dimensions, and pricing displayed on this website are for reference only. Final specifications and pricing are confirmed in formal quotations issued by our sales team.</p>
+
+            <h2>3. Inquiry Submissions</h2>
+            <p>By submitting an inquiry, you confirm that the information provided is accurate and that you are authorized to make business inquiries on behalf of your company.</p>
+
+            <h2>4. Limitation of Liability</h2>
+            <p>This website is provided "as is" without warranties of any kind. We are not liable for any indirect, incidental, or consequential damages arising from website use.</p>
+
+            <h2>5. Intellectual Property</h2>
+            <p>All trademarks, logos, and brand names mentioned on this website are the property of their respective owners. References to client brands (e.g., Hooker, Bernhardt) are for OEM relationship disclosure only.</p>
+
+            <h2>6. Governing Law</h2>
+            <p>These Terms are governed by the laws of the People&#39;s Republic of China. Any disputes shall be resolved in the courts of Shandong Province.</p>
+
+            <h2>7. Contact</h2>
+            <p>For questions about these Terms, please contact info@furnituredong.com.</p>
+
+            <p class="text-xs text-gray-400 mt-12 italic">[Placeholder content — final legal text to be reviewed and confirmed by client&#39;s legal counsel.]</p>
+            '
+            data-zh='
+            <p>访问并使用 furnituredong.com 即表示您同意受本使用条款约束。若您不同意，请勿使用本网站。</p>
+
+            <h2>1. 网站使用</h2>
+            <p>本网站面向家具制造服务的 B2B 商业咨询。所有内容（图片、文字、设计）均为印象北美家具有限公司所有，受知识产权法保护。</p>
+
+            <h2>2. 产品信息</h2>
+            <p>本网站显示的产品规格、尺寸与价格仅供参考。最终规格与价格以我方销售团队出具的正式报价单为准。</p>
+
+            <h2>3. 询盘提交</h2>
+            <p>提交询盘即确认您所提供的信息真实准确，且您有权代表所在公司进行商业咨询。</p>
+
+            <h2>4. 责任限制</h2>
+            <p>本网站按"现状"提供，不附带任何形式的担保。我方不对因使用本网站产生的任何间接、附带或后果性损害承担责任。</p>
+
+            <h2>5. 知识产权</h2>
+            <p>本网站提及的所有商标、标识与品牌名称均为各自所有者的财产。对客户品牌（如 Hooker、Bernhardt）的提及仅为 OEM 合作关系披露。</p>
+
+            <h2>6. 适用法律</h2>
+            <p>本条款受中华人民共和国法律管辖。任何争议应由山东省法院解决。</p>
+
+            <h2>7. 联系方式</h2>
+            <p>如对本条款有任何疑问，请联系 info@furnituredong.com。</p>
+
+            <p class="text-xs text-gray-400 mt-12 italic">【占位内容 — 最终法律文本需经甲方法务审核确认。】</p>
+            '>
+                <!-- Content rendered by i18n.js -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brown-dark text-white py-8 text-center text-sm opacity-75">
+        <p data-en="© 2024 Furniture Dong · Impression North America Furniture Co., Ltd."
+           data-zh="© 2024 东方家具 · 印象北美家具有限公司">© 2024 Furniture Dong</p>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+</body>
+</html>

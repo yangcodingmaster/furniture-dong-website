@@ -1,135 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+      data-en-title="Custom & OEM Furniture Manufacturing | Furniture Dong"
+      data-zh-title="定制与 OEM 家具制造 | 东方家具">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom & OEM Furniture Manufacturing | Furniture Dong</title>
     <meta name="description" content="Custom furniture manufacturing and OEM services. From sketch to shipment. Trusted by Hooker, Bernhardt, and global furniture brands.">
-    <meta name="keywords" content="OEM furniture manufacturer, custom sofa china, ODM furniture supplier, private label furniture">
     <link rel="canonical" href="https://furnituredong.com/custom-oem.html">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Noto+Serif+SC:wght@500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <script>
-        tailwind.config = {
-            theme: { extend: {
-                colors: { brown: { dark: '#3B2314', DEFAULT: '#5C3A1E', light: '#8B6914' }, cream: '#F5F0EB', gold: { DEFAULT: '#D4A853', dark: '#8B6914' } },
-                fontFamily: { heading: ['Playfair Display', 'serif'], body: ['Lato', 'sans-serif'] }
-            }}
-        }
+        tailwind.config = { theme: { extend: {
+            colors: { brown: { dark: '#3B2314', DEFAULT: '#5C3A1E', light: '#8B6914' }, cream: '#F5F0EB', gold: { DEFAULT: '#D4A853', dark: '#8B6914' } },
+            fontFamily: { heading: ['Playfair Display', 'Noto Serif SC', 'serif'], body: ['Lato', 'Noto Serif SC', 'sans-serif'] }
+        }}}
     </script>
     <style>
-        body { font-family: 'Lato', sans-serif; }
-        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        body { font-family: 'Lato', 'Noto Serif SC', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', 'Noto Serif SC', serif; }
+        :lang(zh-CN) h1, :lang(zh-CN) h2, :lang(zh-CN) h3, :lang(zh-CN) h4 { font-family: 'Noto Serif SC', serif; }
         html { scroll-behavior: smooth; }
         .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
         .reveal-delay-1 { transition-delay: 0.1s; }
         .reveal-delay-2 { transition-delay: 0.2s; }
         .reveal-delay-3 { transition-delay: 0.3s; }
+        .lang-toggle { display: inline-flex; border: 1px solid #D4A853; border-radius: 9999px; overflow: hidden; }
+        .lang-toggle button { padding: 4px 12px; font-size: 13px; font-weight: 600; transition: all 0.2s; }
     </style>
 </head>
 <body class="bg-cream text-brown-dark">
 
     <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="index.html" class="font-heading text-2xl font-bold text-brown-dark">Furniture Dong</a>
+            <a href="index.html" class="flex items-center"><img src="images/01_brand/logo.svg" alt="Furniture Dong" class="h-10 w-auto"></a>
             <nav class="hidden md:flex items-center gap-8">
-                <a href="index.html#home" class="text-brown-dark hover:text-gold transition">Home</a>
-                <a href="index.html#products" class="text-brown-dark hover:text-gold transition">Products</a>
-                <a href="index.html#about" class="text-brown-dark hover:text-gold transition">About Us</a>
-                <a href="index.html#contact" class="text-brown-dark hover:text-gold transition">Contact</a>
+                <a href="index.html#home" class="text-brown-dark hover:text-gold transition" data-en="Home" data-zh="首页">Home</a>
+                <a href="index.html#products" class="text-brown-dark hover:text-gold transition" data-en="Products" data-zh="产品">Products</a>
+                <a href="index.html#about" class="text-brown-dark hover:text-gold transition" data-en="About Us" data-zh="关于我们">About Us</a>
+                <a href="index.html#contact" class="text-brown-dark hover:text-gold transition" data-en="Contact" data-zh="联系我们">Contact</a>
             </nav>
-            <a href="index.html#contact" class="hidden md:block bg-gold hover:bg-gold-dark text-white px-5 py-2 rounded transition font-semibold">Request a Quote</a>
+            <div class="flex items-center gap-3">
+                <div class="lang-toggle">
+                    <button data-lang-btn="en" onclick="setLang('en')">EN</button>
+                    <button data-lang-btn="zh" onclick="setLang('zh')">中</button>
+                </div>
+                <a href="index.html#contact" class="hidden md:block bg-gold hover:bg-gold-dark text-white px-5 py-2 rounded transition font-semibold" data-en="Request a Quote" data-zh="获取报价">Request a Quote</a>
+            </div>
         </div>
     </header>
 
     <section class="pt-32 pb-16 bg-gradient-to-b from-brown-dark to-brown text-white">
         <div class="max-w-6xl mx-auto px-6">
             <nav class="text-sm opacity-75 mb-6">
-                <a href="index.html" class="hover:text-gold">Home</a> / <a href="index.html#products" class="hover:text-gold">Products</a> / <span>Custom & OEM</span>
+                <a href="index.html" class="hover:text-gold" data-en="Home" data-zh="首页">Home</a> / <a href="index.html#products" class="hover:text-gold" data-en="Products" data-zh="产品">Products</a> / <span data-en="Custom & OEM" data-zh="定制 / OEM">Custom & OEM</span>
             </nav>
-            <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4 reveal">Custom & OEM Manufacturing</h1>
-            <p class="text-lg opacity-90 max-w-2xl reveal reveal-delay-1">From your sketch to a finished product. We've been the manufacturing partner for Hooker, Bernhardt, and dozens of global brands for over 20 years.</p>
+            <h1 class="text-4xl md:text-5xl font-heading font-bold mb-4 reveal" data-en="Custom & OEM Manufacturing" data-zh="定制与 OEM 制造">Custom & OEM Manufacturing</h1>
+            <p class="text-lg opacity-90 max-w-2xl reveal reveal-delay-1"
+               data-en="From your sketch to a finished product. We've been the manufacturing partner for Hooker, Bernhardt, and dozens of global brands for over 20 years."
+               data-zh="从草图到成品。20 余年来我们已为 Hooker、Bernhardt 等数十家全球品牌提供制造服务。">From your sketch to a finished product. We've been the manufacturing partner for Hooker, Bernhardt, and dozens of global brands for over 20 years.</p>
         </div>
     </section>
 
-    <!-- Capabilities -->
     <section class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-heading font-bold text-center mb-12 reveal">What We Can Customize</h2>
+            <h2 class="text-3xl font-heading font-bold text-center mb-12 reveal" data-en="What We Can Customize" data-zh="可定制范围">What We Can Customize</h2>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="reveal flex gap-4 p-6 bg-cream rounded-lg">
                     <div class="text-3xl">📐</div>
                     <div>
-                        <h3 class="font-heading text-lg font-bold mb-1">Dimensions & Configuration</h3>
-                        <p class="text-gray-600 text-sm">Any size, seat count, modular layout, or arm style.</p>
+                        <h3 class="font-heading text-lg font-bold mb-1" data-en="Dimensions & Configuration" data-zh="尺寸与结构">Dimensions & Configuration</h3>
+                        <p class="text-gray-600 text-sm" data-en="Any size, seat count, modular layout, or arm style." data-zh="任意尺寸、座位数、模块组合、扶手造型。">Any size, seat count, modular layout, or arm style.</p>
                     </div>
                 </div>
                 <div class="reveal reveal-delay-1 flex gap-4 p-6 bg-cream rounded-lg">
                     <div class="text-3xl">🎨</div>
                     <div>
-                        <h3 class="font-heading text-lg font-bold mb-1">Materials & Finishes</h3>
-                        <p class="text-gray-600 text-sm">Leather, fabric, wood stain, metal accents — your choice.</p>
+                        <h3 class="font-heading text-lg font-bold mb-1" data-en="Materials & Finishes" data-zh="材质与饰面">Materials & Finishes</h3>
+                        <p class="text-gray-600 text-sm" data-en="Leather, fabric, wood stain, metal accents — your choice." data-zh="皮革、布艺、木材染色、金属装饰，由您选择。">Leather, fabric, wood stain, metal accents — your choice.</p>
                     </div>
                 </div>
                 <div class="reveal flex gap-4 p-6 bg-cream rounded-lg">
                     <div class="text-3xl">🪡</div>
                     <div>
-                        <h3 class="font-heading text-lg font-bold mb-1">Cushion & Comfort</h3>
-                        <p class="text-gray-600 text-sm">Foam density, down-feather ratio, lumbar support, recline mechanisms.</p>
+                        <h3 class="font-heading text-lg font-bold mb-1" data-en="Cushion & Comfort" data-zh="坐垫与舒适度">Cushion & Comfort</h3>
+                        <p class="text-gray-600 text-sm" data-en="Foam density, down-feather ratio, lumbar support, recline mechanisms." data-zh="海绵密度、羽绒比例、腰部支撑、电动机构。">Foam density, down-feather ratio, lumbar support, recline mechanisms.</p>
                     </div>
                 </div>
                 <div class="reveal reveal-delay-1 flex gap-4 p-6 bg-cream rounded-lg">
                     <div class="text-3xl">🏷️</div>
                     <div>
-                        <h3 class="font-heading text-lg font-bold mb-1">Private Label Branding</h3>
-                        <p class="text-gray-600 text-sm">Custom tags, packaging, and documentation under your brand.</p>
+                        <h3 class="font-heading text-lg font-bold mb-1" data-en="Private Label Branding" data-zh="贴牌品牌化">Private Label Branding</h3>
+                        <p class="text-gray-600 text-sm" data-en="Custom tags, packaging, and documentation under your brand." data-zh="按您的品牌定制标签、包装与单证文件。">Custom tags, packaging, and documentation under your brand.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process -->
     <section class="py-16 bg-cream">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-heading font-bold text-center mb-12 reveal">Our OEM Process</h2>
+            <h2 class="text-3xl font-heading font-bold text-center mb-12 reveal" data-en="Our OEM Process" data-zh="OEM 合作流程">Our OEM Process</h2>
             <div class="grid md:grid-cols-4 gap-6">
                 <div class="reveal text-center">
                     <div class="w-16 h-16 mx-auto mb-4 bg-gold rounded-full flex items-center justify-center text-white font-heading text-2xl font-bold">1</div>
-                    <h3 class="font-heading text-lg font-bold mb-2">Brief & Sketch</h3>
-                    <p class="text-gray-600 text-sm">Send drawings, references, or specs. NDA available.</p>
+                    <h3 class="font-heading text-lg font-bold mb-2" data-en="Brief & Sketch" data-zh="需求与草图">Brief & Sketch</h3>
+                    <p class="text-gray-600 text-sm" data-en="Send drawings, references, or specs. NDA available." data-zh="提供图纸、参考样或规格说明，可签署保密协议。">Send drawings, references, or specs. NDA available.</p>
                 </div>
                 <div class="reveal reveal-delay-1 text-center">
                     <div class="w-16 h-16 mx-auto mb-4 bg-gold rounded-full flex items-center justify-center text-white font-heading text-2xl font-bold">2</div>
-                    <h3 class="font-heading text-lg font-bold mb-2">3D Render & Quote</h3>
-                    <p class="text-gray-600 text-sm">We produce 3D mockups + detailed pricing within 7 days.</p>
+                    <h3 class="font-heading text-lg font-bold mb-2" data-en="3D Render & Quote" data-zh="3D 效果图与报价">3D Render & Quote</h3>
+                    <p class="text-gray-600 text-sm" data-en="We produce 3D mockups + detailed pricing within 7 days." data-zh="7 天内出 3D 效果图与详细报价。">We produce 3D mockups + detailed pricing within 7 days.</p>
                 </div>
                 <div class="reveal reveal-delay-2 text-center">
                     <div class="w-16 h-16 mx-auto mb-4 bg-gold rounded-full flex items-center justify-center text-white font-heading text-2xl font-bold">3</div>
-                    <h3 class="font-heading text-lg font-bold mb-2">Sample Production</h3>
-                    <p class="text-gray-600 text-sm">Pre-production sample for your approval (15–25 days).</p>
+                    <h3 class="font-heading text-lg font-bold mb-2" data-en="Sample Production" data-zh="打样生产">Sample Production</h3>
+                    <p class="text-gray-600 text-sm" data-en="Pre-production sample for your approval (15–25 days)." data-zh="量产前样品确认（15-25 天）。">Pre-production sample for your approval (15–25 days).</p>
                 </div>
                 <div class="reveal reveal-delay-3 text-center">
                     <div class="w-16 h-16 mx-auto mb-4 bg-gold rounded-full flex items-center justify-center text-white font-heading text-2xl font-bold">4</div>
-                    <h3 class="font-heading text-lg font-bold mb-2">Bulk & Ship</h3>
-                    <p class="text-gray-600 text-sm">Mass production with quality inspection at each stage.</p>
+                    <h3 class="font-heading text-lg font-bold mb-2" data-en="Bulk & Ship" data-zh="量产与发货">Bulk & Ship</h3>
+                    <p class="text-gray-600 text-sm" data-en="Mass production with quality inspection at each stage." data-zh="量产期间每阶段执行质量检验。">Mass production with quality inspection at each stage.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trusted By -->
     <section class="py-16 bg-white">
         <div class="max-w-6xl mx-auto px-6 text-center">
-            <h2 class="text-2xl font-heading font-bold mb-4 reveal">Trusted by Industry Leaders</h2>
-            <p class="text-gray-600 mb-12 reveal reveal-delay-1">Including premium American furniture brands</p>
+            <h2 class="text-2xl font-heading font-bold mb-4 reveal" data-en="Trusted by Industry Leaders" data-zh="深受行业领先品牌信赖">Trusted by Industry Leaders</h2>
+            <p class="text-gray-600 mb-12 reveal reveal-delay-1" data-en="Including premium American furniture brands" data-zh="包括美国一线高端家具品牌">Including premium American furniture brands</p>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
                 <div class="reveal text-2xl font-heading font-bold">HOOKER</div>
                 <div class="reveal reveal-delay-1 text-2xl font-heading font-bold">BERNHARDT</div>
-                <div class="reveal reveal-delay-2 text-2xl font-heading font-bold italic">+ 20 more</div>
+                <div class="reveal reveal-delay-2 text-2xl font-heading font-bold italic" data-en="+ 20 more" data-zh="+ 20 余家">+ 20 more</div>
                 <div class="reveal reveal-delay-3 text-2xl font-heading font-bold">SGS ✓</div>
             </div>
         </div>
@@ -137,18 +145,20 @@
 
     <section class="py-16 bg-brown-dark text-white text-center">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-heading font-bold mb-4 reveal">Have a Custom Project in Mind?</h2>
-            <p class="opacity-90 mb-8 reveal reveal-delay-1">Tell us about your idea — we'll guide you from concept to container.</p>
-            <a href="index.html#contact" class="reveal reveal-delay-2 inline-block bg-gold hover:bg-gold-dark text-white px-8 py-4 rounded text-lg font-semibold transition">Start Your Project</a>
+            <h2 class="text-3xl font-heading font-bold mb-4 reveal" data-en="Have a Custom Project in Mind?" data-zh="有定制项目想法？">Have a Custom Project in Mind?</h2>
+            <p class="opacity-90 mb-8 reveal reveal-delay-1" data-en="Tell us about your idea — we'll guide you from concept to container." data-zh="告诉我们您的想法 — 从概念到整柜，全程陪伴。">Tell us about your idea — we'll guide you from concept to container.</p>
+            <a href="index.html#contact" class="reveal reveal-delay-2 inline-block bg-gold hover:bg-gold-dark text-white px-8 py-4 rounded text-lg font-semibold transition" data-en="Start Your Project" data-zh="启动您的项目">Start Your Project</a>
         </div>
     </section>
 
     <footer class="bg-brown-dark border-t border-white/10 text-white py-8">
         <div class="max-w-6xl mx-auto px-6 text-center text-sm opacity-75">
-            <p>© 2024 Furniture Dong · Impression North America Furniture Co., Ltd. · Shandong, China</p>
+            <p data-en="© 2024 Furniture Dong · Impression North America Furniture Co., Ltd. · Shandong, China"
+               data-zh="© 2024 东方家具 · 印象北美家具有限公司 · 中国 · 山东">© 2024 Furniture Dong · Impression North America Furniture Co., Ltd. · Shandong, China</p>
         </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script>
         const obs = new IntersectionObserver((entries) => {
             entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
